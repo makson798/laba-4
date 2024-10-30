@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна - Турфірма</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        nav a { margin: 0 10px; text-decoration: none; color: blue; }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body>
+    <header>
+        <h1>Турфірма Вітальович</h1>
+        <a href="#modal" class="button" id="sing-in-button">Sign in</a>
+
+    <!-- Модальне вікно -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close">&times;</a>
+
+        <h2>Форма автентифікації</h2>
+        <form>
+            <label for="username">Ім'я користувача:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="button">Увійти</button>
+        </form>
+    </div>
+</div>
+        <nav>
+            <ul>
+                <li><button class="dropbtn"><a href="#">Меню▼</a></button>
+                    <ul class="submenu">
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="survey.html">Опитувальник</a></li>
+                        <li><a href="news.html">Новини</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
+                    </ul>
+                </li>
+               
+            </ul>
+        </nav>
+    <form id="search-form">
+        <input type="text" id="search-input" placeholder="Пошук...">
+        <button type="submit" id="search-button">🔍</button>
+    </form>
+    </header>
+    <main>
+        <img src="11111111111.jpg" alt="photo">
+        <h2>Ласкаво просимо!</h2>
+        <p>Ми <em>пропонуємо</em> найкращі туристичні послуги для <b>вас</b>. Відпочинок, екскурсії, пригоди - усе, що ви тільки можете собі уявити!</p>
+    </main>
+    <div class="image-hover">
+        <p class="hover-text">Зображення</p>
+        <img src="franciya-parizh-ejfeleva-vezha-aerofotozjomka-shpalery.jpg" alt="Example image" class="hover-image">
+    </div>
+    <section id="reviews">
+        <div class="review">
+          <div class="review-header">
+            <h3>Георгій</h3>
+            <span class="review-date">14 грудня 2023, 15:03</span>
+            <div class="review-rating">★★★★☆</div>
+          </div>
+          <p>Глушник Сервіс — майстерня, яку я всім друзям рекомендую. Лагодився з різних причин тут не раз, і ніколи не стикався з халтурою або зірваними термінами...</p>
+        </div>
+      
+        <div class="review">
+          <div class="review-header">
+            <h3>Назяр Юрченко</h3>
+            <span class="review-date">19 листопада 2023, 15:04</span>
+            <div class="review-rating">★★★★★</div>
+          </div>
+          <p>Їжджу на Gran Turismo, не сама ходова модель, тому не скрізь беруться її обслуговувати. А тут раптом вихлоп в салон почав потрапляти, я вже не витримав...</p>
+        </div>
+      
+        <div class="review">
+          <div class="review-header">
+            <h3>Єгор Крутнов</h3>
+            <span class="review-date">07 вересня 2023, 14:56</span>
+            <div class="review-rating">★★★★☆</div>
+          </div>
+          <p>Х5 модель була моєю мрією, брав БУ, все нормально було. Поки під днищем не застукало...</p>
+        </div>
+      
+        <div class="review">
+          <div class="review-header">
+            <h3>Ілля Камиш</h3>
+            <span class="review-date">21 липня 2023, 15:02</span>
+            <div class="review-rating">★★★★★</div>
+          </div>
+          <p>У мене 3 Series, лагодив тут пару місяців тому. Майстри з Глушник Сервіс — ви найкращі з усіх механіків...</p>
+        </div>
+      </section>
+    <footer>
+        <button id="scrollTop" title="Наверх">↑</button>
+        <p>&copy; 2024 Турфірма. Всі права захищені.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.onscroll = function() {
+            var scrollTopButton = document.getElementById("scrollTop");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopButton.style.display = "block";
+            } else {
+                scrollTopButton.style.display = "none";
+            }
+        };
+        
+        document.getElementById('scrollTop').onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        </script>
+</body>
+
+</html>
